@@ -1,0 +1,83 @@
+#!/usr/bin/env python
+
+'''
+Produce a rather bad poster for a compulsary conferance, 
+but by doing so it shows as exemple of a reproducible project.'''
+
+__author__      = "Tobias Staal"
+__copyright__   = "Copyrigh"
+__license__ = "GPL"
+__version__ = "1.0.1"
+__maintainer__ = "Tobias Staal"
+__email__ = "tobbe@tripitaka.se"
+
+import os, sys, urllib
+from colorama import init
+from termcolor import colored
+
+# use Colorama to make Termcolor work on Windows too
+init()
+
+#SCons does not automatically propagate the external environment, import it by defining ENV from Pythons os
+env = Environment(ENV = os.environ)
+
+
+def download_url(url, filename, local_file):
+	'''
+	If the file doesn't exist; download file (url) but if the link is dead, it uses old file. 
+	'''
+	if not os.path.isfile(filename):
+		print 'Get: ', url
+		try:
+			urllib.urlretrieve(url, filename)
+			print colored(('%s fetched from original source.' % filename), 'green')
+		except:
+			print colored(('Use old file: %s. Error:' % filename, sys.exc_info()[0]), 'red')
+			env.Command(filename, local_file, Copy("$TARGET", "$SOURCE"))
+		return
+	else:
+		print colored('File exist', 'yellow')
+
+def python_fig(python_script, filename, local_file):
+	'''
+	If the file doesn't exist; run the script but if it doesn't work, it uses old file. 
+	'''
+	if not os.path.isfile(filename):
+		print 'Run %s to produce %s.' %(python_script, filename)
+		try:
+			env.Command(filename, python_script, 'python $SOURCE > $TARGET')
+			#print colored(('%s reproduced.' % filename), 'green')
+		except:
+			env.Command(filename, local_file, Copy("$TARGET", "$SOURCE"))
+			#print colored('Use old file: %s. Error:' % filename, sys.exc_info()[0], 'red')
+		return
+
+#Run python code to create the three maps
+#In many cases, one python script could easily produce all plots, but to keep the 
+#dependencies right, three different scripts are used. 
+for figure in ['heat','LAB','crust']:
+	python_fig('An_%s.py' %figure,'fig/An_%s.png' %figure, 'fig/old/An_%s.png' %figure)
+
+# Download data used
+download_url('https://dl.dropboxusercontent.com/u/3474970/poster/ICE.pdf', 
+	'fig/ice_cartoon.pdf', 'fig/old/ice_cartoon.pdf')
+	
+download_url('https://dl.dropboxusercontent.com/u/3474970/poster/boger_map.pdf', 
+	'fig/boger_map.pdf', 'fig/old/boger_map.pdf')
+	
+download_url('http://sitn.hms.harvard.edu/wp-content/uploads/2016/02/12435253353_15ad92569d_k.jpg', 
+	'fig/photo_ice.jpg', 'fig/old/photo_ice.jpg')
+	
+download_url('http://www.utas.edu.au/__data/assets/image/0010/858160/UTAS-White-Stacked.png', 
+	'fig/UTAS-White-Stacked.png', 'fig/old/UTAS-White-Stacked.png')
+	
+# ORCID 
+download_url('http://no.public/link.png', 
+	'fig/orcid.png', 'fig/old/placeholder.gif')	
+	
+Depends( 'poster.tex', ['fig/An_heat.png','fig/An_LAB.png','fig/An_crust.png',
+	'boger_map.pdf','photo_ice.jpg','UTAS-White-Stacked.png','fig/orcid.png'])	
+
+env.PDF (target = 'poster.pdf', source ='poster.tex')
+
+
