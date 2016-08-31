@@ -1,0 +1,214 @@
+\documentclass[25pt,final,hyperref={pdfpagelabels=false}]{beamer}
+\usepackage[orientation=portrait,size=a0,scale=1.0]{beamerposter} 
+
+\usepackage[english]{babel} 
+\usepackage[utf8]{inputenc}
+
+\usepackage[absolute,overlay]{textpos}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,snakes}
+\usepackage{amsmath,amssymb}
+
+\usepackage{tcolorbox}
+
+\usepackage{graphicx}
+\renewcommand{\figurename}{Fig.}
+
+\selectcolormodel{cmyk}
+\mode<presentation>
+
+\usepackage{color}
+	\definecolor{utasred}{cmyk}{0.4,0.98,1,0.01}
+	\definecolor{utasyellow}{cmyk}{0.1,0.1,0.4,0.1}
+	\definecolor{utasgray}{cmyk}{0.1,0.1,0.1,0.3}
+
+	\definecolor{imasgreen}{cmyk}{0.91,0.47,0.37,0.11}
+	\definecolor{imascyan}{cmyk}{0.56,0.02,0,0}
+	\definecolor{imasblue}{cmyk}{0.87,0.51,0,0}
+	\definecolor{imaswhite}{cmyk}{0.05,0,0,0.1}
+
+	\setbeamercolor{headline}{fg=utasyellow,bg=black}
+	\setbeamercolor{footline}{fg=utasyellow, bg=imasblue}
+	\setbeamerfont{footline}{size=\large,series=\tt}
+	\setbeamercolor{separation line}{bg=imascyan}
+	\setbeamercolor{title in headline}{fg=white}
+	\setbeamercolor{author in headline}{fg=white}
+	\setbeamercolor{institute in headline}{fg=white}
+
+	\setbeamercolor{framesubtitle}{fg=imasblue, bg=white}
+	\setbeamercolor{author in head/foot}{fg=white, bg=black}
+	\setbeamercolor{title in head/foot}{fg=black, bg=black}
+
+	\setbeamercolor*{normal text}{fg=black, bg=imasblue}
+	\setbeamercolor*{block body}{bg=imaswhite,fg=black}
+	\setbeamercolor*{block title}{fg=black,bg=utasyellow}
+	\setbeamerfont{block title}{size=\large,series=\bf}
+	\setbeamercolor{upper separation line head}{fg=utasyellow}
+
+	\setbeamercolor*{example body}{fg=ta3aluminium,bg=black}
+	\setbeamercolor*{example text}{fg=ta3aluminium,bg=black}
+	\setbeamercolor*{example title}{bg=black,fg=imascyan}
+
+	\setbeamercolor{alerted text}{fg=utasred}
+
+	\setbeamercolor{example text}{fg=black}
+	\setbeamercolor{structure}{fg=black}
+
+\setbeamertemplate{itemize items}[triangle]
+\setbeamertemplate{navigation symbols}{}  % no navigation on a poster
+
+%%
+\setbeamertemplate{block begin}{
+	\vskip.75ex
+	\begin{beamercolorbox}[ht=3.5ex,dp=0.5ex,center,leftskip=-1em,colsep*=.75ex]{block title}%
+		\usebeamerfont*{block title}%
+		{\phantom{Gg}\insertblocktitle}% phantom because of baseline problem
+	\end{beamercolorbox}%
+	{\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
+	\usebeamerfont{block body}%
+	\begin{beamercolorbox}[leftskip=1em,colsep*=.75ex,sep=0.5ex,vmode]{block body}%
+		\ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+	}
+	\setbeamertemplate{block end}{
+	\end{beamercolorbox}
+}
+
+\tcbset{
+	colback=imaswhite,
+	colframe=black,
+	center title,
+	fonttitle=\bfseries,
+	coltitle=imaswhite,
+	sharp corners}
+
+
+%%
+\setbeamertemplate{headline}{  
+	\leavevmode
+	
+	\begin{beamercolorbox}[wd=\paperwidth]{headline}
+		\begin{columns}[T]
+			\begin{column}{.02\paperwidth}
+			\end{column}
+			\begin{column}{.7\paperwidth}
+				\vskip4ex
+				\raggedleft
+				\usebeamercolor{title in headline}{\color{fg}\textbf{\LARGE{\inserttitle}}\\[1ex]}
+				\usebeamercolor{author in headline}{\color{fg}\large{\insertauthor}\\[1ex]}
+				\usebeamercolor{institute in headline}{\color{fg}\large{\insertinstitute}\\[1ex]}     
+			\end{column}
+			\begin{column}{.25\paperwidth}
+				\vskip8ex
+				\begin{center}
+					\includegraphics[width=.7\linewidth]{UTAS-White-Stacked.png}
+				\end{center}
+				\vskip2ex
+			\end{column}
+			\begin{column}{.02\paperwidth}
+			\end{column}
+		\end{columns}
+		\vskip2ex
+	\end{beamercolorbox}
+	
+	\begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
+		\rule{0pt}{3pt}
+	\end{beamercolorbox}
+}
+
+
+%%
+\setbeamertemplate{footline}{
+	\begin{beamercolorbox}[wd=\paperwidth]{upper separation line foot}
+		\rule{0pt}{3pt}
+	\end{beamercolorbox}
+	
+	\leavevmode%
+	\begin{beamercolorbox}[ht=4ex,leftskip=1em,rightskip=1em]{author in head/foot}%
+		\texttt{\leftfoot}
+		\hfill
+		\texttt{\rightfoot}
+		\vskip1ex
+	\end{beamercolorbox}
+	\vskip0pt%
+	\begin{beamercolorbox}[wd=\paperwidth]{lower separation line foot}
+		\rule{0pt}{3pt}
+	\end{beamercolorbox}
+}
+
+\mode<all>
+
+% adapt height of imtemize rectangles
+\setbeamertemplate{itemize items}[triangle]
+\setbeamertemplate{itemize item}{\raisebox{0.12ex}{$\blacktriangleright$}\hskip0.1em}
+\setbeamertemplate{itemize subitem}{\raisebox{0.12ex}{$\triangleright$}\hskip0.1em}
+% or define your own template using \defbeamertemplate{itemize item}, see beameruserguide.pdf
+
+% equal font sizes for all levels
+\setbeamerfont{itemize/enumerate body}{size=\normalsize}
+\setbeamerfont{itemize/enumerate subbody}{size=\normalsize}
+\setbeamerfont{itemize/enumerate subsubbody}{size=\normalsize}
+
+% set bibliography style
+\setbeamertemplate{bibliography item}[text]
+\setbeamercolor{bibliography item}{fg=black,bg=white}
+\setbeamercolor{bibliography entry author}{fg=black,bg=white}
+\setbeamercolor{bibliography item}{fg=black,bg=white}
+
+%Follow UTAS standard
+
+\usepackage{amsmath,amsthm,amssymb,latexsym} % For including math equations, theorems, symbols, etc
+%\usepackage{times}\usefonttheme{professionalfonts}  % Uncomment to use Times as the main font
+%\usefonttheme[onlymath]{serif} % Uncomment to use a Serif font within math environments
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[square,numbers]{natbib}
+\bibliographystyle{abbrvnat}
+\renewcommand{\bibname}{tex/poster.bib} 
+
+%\boldmath 
+\usepackage{booktabs} % Top and bottom rules for tables
+\graphicspath{{fig/}} % Location of the graphics files
+\usecaptiontemplate{\small\structure{\insertcaptionname~\insertcaptionnumber: }\insertcaption} % A fix for figure numbering
+
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION 
+
+\title{{\fontsize{90}{100}\selectfont  Grilling the Antarctic ice sheet: \\  how to imagine the perfect crust.}} % Poster title
+
+\author{\large Tobias Stål} % Author(s)
+
+\institute{\large University of Tasmania, Institute for Marine and Antarctic Studies} % Institution(s)
+
+%----------------------------------------------------------------------------------------
+%	FOOTER TEXT
+%----------------------------------------------------------------------------------------
+
+\newcommand{\leftfoot}{Reproducible code for Python and {\LaTeX} availible at \url{https://github.com/TobbeTripitaka/GRC2016_poster}} 
+
+\newcommand{\rightfoot}{UTAS/IMAS, 2016} 
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+
+% Define textbox and box title style
+\tikzstyle{textbox} = [draw=black, fill=imaswhite, very thick,
+rectangle, inner sep=10pt, inner ysep=20pt]
+\tikzstyle{fancytitle} =[fill=red, text=white]
+
+
+
+\begin{frame}[t] % The whole poster is enclosed in one beamer frame
+
+
+\input{tikz_poster.tex}
+
+
+\end{frame} % End of the enclosing frame
+
+\end{document}

@@ -1,6 +1,4 @@
-import datetime as dt  # Python standard library datetime  module
 import numpy as np
-import numpy.ma as ma
 from netCDF4 import Dataset  # http://code.google.com/p/netcdf4-python/
 import matplotlib.pyplot as plt
 
@@ -74,11 +72,11 @@ def ncdump(nc_fid, verb=True):
     return nc_attrs, nc_dims, nc_vars
 
 
-heat_flux = 'data/AN1-LAB.grd'
+LAB_depth = 'data/old/AN1-LAB.grd'
 
 # an_model is initial array, ny and nx resolution
 
-nc_fid = Dataset(heat_flux, 'r')
+nc_fid = Dataset(LAB_depth, 'r')
 nc_attrs, nc_dims, nc_vars = ncdump(nc_fid)
 # Extract data from NetCDF file
 

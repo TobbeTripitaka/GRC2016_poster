@@ -72,7 +72,7 @@ def ncdump(nc_fid, verb=True):
     return nc_attrs, nc_dims, nc_vars
 
 
-heat_flux = 'data/AN1-HF.grd'
+heat_flux = 'data/old/AN1-HF.grd'
 
 # an_model is initial array, ny and nx resolution
 
@@ -115,7 +115,7 @@ cb.ax.tick_params(labelsize=24)
 cb.ax.yaxis.set_tick_params(color='w')
 
 
-plt.savefig('fig/An_heat.png', bbox_inches='tight',transparent=True)
+plt.savefig('fig/An_HEAT.png', bbox_inches='tight',transparent=True)
 
 #plt.tight_layout()
 #plt.show()

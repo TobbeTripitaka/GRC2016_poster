@@ -79,11 +79,11 @@ def ncdump(nc_fid, verb=True):
     return nc_attrs, nc_dims, nc_vars
 
 
-heat_flux = 'data/AN1-CRUST.grd'
+crust_depth = 'data/old/AN1-CRUST.grd'
 
 # an_model is initial array, ny and nx resolution
 
-nc_fid = Dataset(heat_flux, 'r')
+nc_fid = Dataset(crust_depth, 'r')
 nc_attrs, nc_dims, nc_vars = ncdump(nc_fid)
 # Extract data from NetCDF file
 
@@ -122,7 +122,7 @@ cb.ax.tick_params(labelsize=24)
 cb.ax.yaxis.set_tick_params(color='w')
 
 
-plt.savefig('fig/An_crust.png', bbox_inches='tight',transparent=True)
+plt.savefig('fig/An_CRUST.png', bbox_inches='tight',transparent=True)
 
 #plt.tight_layout()
 #plt.show()
