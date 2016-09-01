@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.8.15)  31 AUG 2016 17:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.8.15)  2 SEP 2016 09:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1586,8 +1586,7 @@ r-theorem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 LaTeX Info: Redefining \includegraphics on input line 196.
-
-No file poster.nav.
+ (./poster.nav)
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <24.88> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 196.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <20.74> not available
@@ -1701,14 +1700,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--11
  []
 
 
-Package natbib Warning: Citation `Fisher2015' on page 1 undefined on input line
- 12.
-
-
-Package natbib Warning: Citation `Boger2011' on page 1 undefined on input line 
-12.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 12--13
 []\OT1/phv/m/n/24.88 In the tec-tonic his-tory of the Earth, Antarc-tica ap-pea
 rs to have
@@ -1814,19 +1805,6 @@ File: fig/ice_cartoon.pdf Graphic file (type pdf)
 Package pdftex.def Info: fig/ice_cartoon.pdf used on input line 23.
 (pdftex.def)             Requested size: 350.85977pt x 299.84714pt.
 
-
-Package natbib Warning: Citation `Beardsmore2001' on page 1 undefined on input 
-line 26.
-
-
-Package natbib Warning: Citation `Carson2013' on page 1 undefined on input line
- 26.
-
-
-Package natbib Warning: Citation `Boger2011' on page 1 undefined on input line 
-37.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 37--38
 []\OT1/phv/m/n/24.88 The ge-ol-ogy of Antarc-tica is only known from scarce out
 -crops
@@ -1835,43 +1813,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
 Underfull \hbox (badness 10000) in paragraph at lines 37--38
 \OT1/phv/m/n/24.88 along the coast and a few moun-tains in the in-te-rior. Ther
-e-fore,
+e-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 37--38
-\OT1/phv/m/n/24.88 any ge-o-log-i-cal map of Antarc-tica is a lit-tle more than
- a guess-
+\OT1/phv/m/n/24.88 fore, any ge-o-log-i-cal map of Antarc-tica is a lit-tle mor
+e than a
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 37--38
-\OT1/phv/m/n/24.88 work. The bound-aries be-tween ge-o-log-i-cal ter-rains are 
-not
+\OT1/phv/m/n/24.88 guess-work. The bound-aries be-tween ge-o-log-i-cal ter-rain
+s are
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 37--38
-\OT1/phv/m/n/24.88 more jus-ti-fied than colo-nial bor-ders through a land of u
-n-known
+\OT1/phv/m/n/24.88 not more jus-ti-fied than colo-nial bor-ders through a land 
+of un-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 37--38
-\OT1/phv/m/n/24.88 cul-tures. To be able to es-ti-mate the heat flux, we need t
-o have
+\OT1/phv/m/n/24.88 known cul-tures. To be able to es-ti-mate the heat flux, we 
+need
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 37--38
-\OT1/phv/m/n/24.88 a more truth-ful map of the ge-o-log-i-cal ter-rains un-der 
-the ice [\OT1/phv/b/n/24.88 ?
+\OT1/phv/m/n/24.88 to have a more truth-ful map of the ge-o-log-i-cal ter-rains
+ un-der the
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 37--38
-\OT1/phv/m/n/24.88 ]. If bound-aries re-main un-cer-tain, the prob-a-bil-i-ties
- should be
+\OT1/phv/m/n/24.88 ice [[]]. If bound-aries re-main un-cer-tain, the prob-a-bil
+-i-ties should
  []
 
 <fig/boger_map.pdf, id=17, 991.30348pt x 837.85017pt>
@@ -1890,10 +1868,312 @@ Overfull \hbox (1613.27126pt too wide) in paragraph at lines 45--47
  [][][][][] 
  []
 
+<fig/An_heat.png, id=20, 758.835pt x 851.3406pt>
+File: fig/An_heat.png Graphic file (type png)
+ <use fig/An_heat.png>
+Package pdftex.def Info: fig/An_heat.png used on input line 61.
+(pdftex.def)             Requested size: 682.9452pt x 766.19948pt.
 
-Package natbib Warning: Citation `An2015' on page 1 undefined on input line 60.
+Underfull \hbox (badness 10000) in paragraph at lines 65--67
+[]\OT1/phv/m/n/24.88 Crustal heat flow in $\OT1/phv/m/sl/24.88 mW\OML/cmm/m/it/
+24.88 =\OT1/phv/m/sl/24.88 m[]$ \OT1/phv/m/n/24.88 based on seis-mic ve-loc-i-t
+ies and
+ []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 65--67
+\OT1/phv/m/n/24.88 heat trans-fer func-tions [[]]. This is our best avail-able 
+method to
+ []
 
-!pdfTeX error: pdflatex (file ./fig/An_heat.png): libpng: internal error
- ==> Fatal error occurred, no output PDF file produced!
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--67
+\OT1/phv/m/n/24.88 es-ti-mate the heat flow in ab-sence of di-rect mea-sure-men
+ts. Hot
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--67
+\OT1/phv/m/n/24.88 ma-te-rial gen-er-ally have a lower ve-loc-ity and cold ma-t
+e-rial has
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--67
+\OT1/phv/m/n/24.88 a higher ve-loc-ity. Un-for-tu-nately, this kind of mod-els 
+don't agree
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--67
+\OT1/phv/m/n/24.88 well with ac-tual di-rect mea-sure-ments that lo-cally can b
+e 2-3
+ []
+
+<fig/An_LAB.png, id=22, 758.835pt x 851.3406pt>
+File: fig/An_LAB.png Graphic file (type png)
+ <use fig/An_LAB.png>
+Package pdftex.def Info: fig/An_LAB.png used on input line 86.
+(pdftex.def)             Requested size: 682.9452pt x 766.19948pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
+[]\OT1/phv/m/n/24.88 The depth in $\OT1/phv/m/sl/24.88 km$ \OT1/phv/m/n/24.88 t
+o the bound-ary be-tween the litho-sphere and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
+\OT1/phv/m/n/24.88 the \OT1/phv/m/sl/24.88 as-teno-sphere \OT1/phv/m/n/24.88 is
+ not un-am-bigu-ous. It de-pends on what
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
+\OT1/phv/m/n/24.88 def-i-ni-tion we use for the litho-sphere. In this map thick
+-ness is
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
+\OT1/phv/m/n/24.88 de-rived from seis-mic ve-loc-i-ties and can be used as con-
+straints
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
+\OT1/phv/m/n/24.88 for the tec-tonic re-gions of Antarc-tica. Note that East An
+tarc-tica
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
+\OT1/phv/m/n/24.88 is much thicker than West Antarc-tica, sug-gest-ing a dif-fe
+r-ent
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
+[]\OT1/phv/m/n/24.88 By mea-sur-ing the time for a seis-mic event from e.g. an 
+earth-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
+\OT1/phv/m/n/24.88 quake to a seis-mome-ter, we can in-verse for the ve-loc-ity
+. Un-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
+\OT1/phv/m/n/24.88 for-tu-nately, in this con-text, there is not many earth-qua
+kes in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
+\OT1/phv/m/n/24.88 Antarc-tica and un-til re-cently, it's been very few seis-mo
+me-ters.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
+\OT1/phv/m/n/24.88 The mod-els have been very course in prob-a-bly not cor-rect
+ but
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
+\OT1/phv/m/n/24.88 thanks to the cam-paigns dur-ing the In-ter-na-tional Po-lar
+ Year
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
+\OT1/phv/m/n/24.88 (IPY) 2007-08 we now have more mea-sure-ments. For high
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
+\OT1/phv/m/n/24.88 res-o-lu-tion mod-els, even more seis-mic sta-tions are need
+ed and
+ []
+
+<fig/An_CRUST.png, id=24, 760.2804pt x 851.3406pt>
+File: fig/An_CRUST.png Graphic file (type png)
+ <use fig/An_CRUST.png>
+Package pdftex.def Info: fig/An_CRUST.png used on input line 105.
+(pdftex.def)             Requested size: 684.24605pt x 766.19948pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--110
+[]\OT1/phv/m/n/24.88 The thick-ness of the crust in $\OT1/phv/m/sl/24.88 km$\OT
+1/phv/m/n/24.88 . The crust is chem-i-cally dis-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--110
+\OT1/phv/m/n/24.88 tinct from the man-tle, and eas-ier to de-fine. The thick-ne
+ss can
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--110
+\OT1/phv/m/n/24.88 be used as cor-re-la-tion be-tween var-i-ous seis-mic tech-n
+iques
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--110
+\OT1/phv/m/n/24.88 [[]]. Dif-fer-ent seis-mic meth-ods don't agree ev-ery-where
+, e.g
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--110
+\OT1/phv/m/sl/24.88 re-ceiver func-tions \OT1/phv/m/n/24.88 can mea-sure the lo
+-cal crustal thick-ness with
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--110
+\OT1/phv/m/n/24.88 rather good ac-cu-racy, \OT1/phv/m/sl/24.88 to-mog-ra-phy \O
+T1/phv/m/n/24.88 can be used for larger ar-eas
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--110
+\OT1/phv/m/n/24.88 but changes seen in re-ceiver func-tions are not present in 
+low
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
+[]\OT1/phv/m/n/24.88 A bet-ter model of Antarc-tic litho-sphere is needed to cr
+e-ate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
+\OT1/phv/m/n/24.88 more ac-cu-rate mod-els for heat flow and isostasy. Present
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
+\OT1/phv/m/n/24.88 mod-els [[]] can be im-proved with a in-ter-dis-ci-plinary a
+p-proach.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
+\OT1/phv/m/n/24.88 Con-straints from ge-ol-ogy and di-rect mea-sure-ments can a
+dd
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
+\OT1/phv/m/n/24.88 im-por-tant pa-ram-e-ters. More-over, a sta-tis-ti-cal ap-pr
+oach to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
+\OT1/phv/m/n/24.88 un-cer-tain-ties can fur-ther im-prove the mod-els. Stud-ies
+ of the
+ []
+
+(./poster.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 11--16
+[]\OT1/phv/m/n/12 A. R. A. Aitken, D. A. Young, F. Fer-rac-ci-oli, P. G. Betts,
+ J. S. Green-baum, T. G. Richter, J. L. Roberts, D. D.
+ []
+
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 27.
+
+Underfull \hbox (badness 1173) in paragraph at lines 37--41
+[]\OT1/phv/m/n/12 C. J. Car-son, S. McLaren, J. L. Roberts, S. D. Boger, and D.
+ D. Blanken-ship.  Hot rocks in a cold place: high
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--47
+[]\OT1/phv/m/n/12 A. T. Fisher, K. D. Mankoff, S. M. Tu-laczyk, and S. W. Tyler
+.  High geother-mal heat flux mea-sured be-low the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--53
+[]\OT1/phv/m/n/12 A. M. Read-ing.  The seis-mic struc-ture of Pre-cam-brian and
+ early Palaeo-zoic ter-ranes in the Lam-bert Glacier re-
+ []
+
+) <fig/orcid.png, id=28, 431.6125pt x 431.6125pt>
+File: fig/orcid.png Graphic file (type png)
+ <use fig/orcid.png>
+Package pdftex.def Info: fig/orcid.png used on input line 169.
+(pdftex.def)             Requested size: 99.58464pt x 99.5849pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--171
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--173
+[]\OT1/phv/m/sl/24.88 Photo of po-lar ice and rocks by An-dreas Kam-ba-nis. Li-
+censed
+ []
+
+
+Overfull \hbox (1.3295pt too wide) in paragraph at lines 179--180
+[][]  
+ []
+
+)
+File: fig/UTAS-White-Stacked.png Graphic file (type png)
+ <use fig/UTAS-White-Stacked.png>
+Package pdftex.def Info: fig/UTAS-White-Stacked.png used on input line 212.
+(pdftex.def)             Requested size: 418.05453pt x 218.81348pt.
+ [1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+ <./fig/photo_ice.jpg> <./fig/An_heat.png> <./fig/An_LAB.png> <./fig/An_CRUST.p
+ng> <./fig/UTAS-White-Stacked.png> <./fig/ice_cartoon.pdf> <./fig/boger_map.pdf
+> <./fig/orcid.png>]
+\tf@nav=\write8
+\openout8 = `poster.nav'.
+
+\tf@toc=\write9
+\openout9 = `poster.toc'.
+
+\tf@snm=\write10
+\openout10 = `poster.snm'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 214.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 214.
+ (./poster.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 214.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 214.
+Package rerunfilecheck Info: File `poster.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 214.
+ ) 
+Here is how much of TeX's memory you used:
+ 26101 strings out of 493014
+ 538003 string characters out of 6133351
+ 698593 words of memory out of 5000000
+ 29003 multiletter control sequences out of 15000+600000
+ 27796 words of font info for 62 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 56i,20n,76p,925b,1065s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/te
+xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/tex
+live/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local
+/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texliv
+e/2016/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2016/
+texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on poster.pdf (1 page, 54003525 bytes).
+PDF statistics:
+ 98 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 500000)
+ 107 words of extra memory for PDF output out of 10000 (max. 10000000)
+

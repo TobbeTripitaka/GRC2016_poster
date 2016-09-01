@@ -72,7 +72,7 @@ def ncdump(nc_fid, verb=True):
     return nc_attrs, nc_dims, nc_vars
 
 
-LAB_depth = 'data/old/AN1-LAB.grd'
+LAB_depth = 'data/AN1-LAB.grd'
 
 # an_model is initial array, ny and nx resolution
 

@@ -7,11 +7,11 @@ but by doing so it shows as exemple of a reproducible project.'''
 __author__      = "Tobias Staal"
 __copyright__   = "Copyrigh"
 __license__ = "GPL"
-__version__ = "1.1.0"
+__version__ = "1.5.0"
 __maintainer__ = "Tobias Staal"
 __email__ = "tobbe@tripitaka.se"
 
-import os, sys, urllib
+import os, sys, urllib, tarfile
 from colorama import init
 from termcolor import colored
 
@@ -21,21 +21,51 @@ init()
 #SCons does not automatically propagate the external environment, import it by defining ENV from Pythons os
 env = Environment(ENV = os.environ)
 
+
+#def replace_last(source_string, replace_what, replace_with):
+#    head, tail = source_string.rpartition(replace_what)
+#    return head + replace_with
+#                    head, tail = filename.rpartition('.tar.gz')
+#                filename = head + '.grd'
+
+def unpack_if_needed(filename):
+    if (filename.endswith('tar.gz')): 
+        tar = tarfile.open(filename, 'r:gz')
+        tar.extractall(path=os.path.dirname(filename))
+        filename = os.path.dirname(filename)
+        tar.close()
+        head, tail = filename.rpartition('.tar.gz')
+        filename = head + '.grd'    
+    elif (filename.endswith('tar')):
+        tar = tarfile.open(filename, 'r:')
+        tar.extractall(path=os.path.dirname(filename))
+        filename = os.path.dirname(filename) 
+        tar.close()	
+        head, tail = filename.rpartition('.tar')
+        filename = head + '.grd'    
+    else:
+        pass
+    return filename
+
+
 def download_url(url, filename, local_file):
-	'''
-	If the file doesn't exist; download file (url) but if the link is dead, it uses old file. 
-	'''
-	if not os.path.isfile(filename):
-		print 'Get: ', url
-		try:
-			urllib.urlretrieve(url, filename)
-			print colored('%s fetched from original source.' % filename, 'green')
-		except:
-			print colored('Use old file: %s. Error: %s' %(local_file, sys.exc_info()[0]), 'red')
-			env.Command(filename, local_file, Copy("$TARGET", "$SOURCE"))
+    '''
+    If the file doesn't exist; download file (url) but if the link is dead, it uses old file. 
+    '''
+    if not os.path.isfile(filename):
+        print 'Get: ', url
+        try:
+            urllib.urlretrieve(url, filename)
+            filename = unpack_if_needed(filename)
+            print colored('%s fetched from original source.' % filename, 'green')
+        except:
+            print colored('Use old file: %s. Error: %s' %(local_file, sys.exc_info()[0]), 'red')
+            env.Command(filename, local_file, Copy("$TARGET", "$SOURCE"))
+            filename = unpack_if_needed(filename)
 	else:
 		print colored('%s exists' % filename, 'yellow')
 	return
+
 
 def python_fig(python_script, filename, local_file):
 	'''
@@ -44,7 +74,7 @@ def python_fig(python_script, filename, local_file):
 	if not os.path.isfile(filename):
 		print 'Run %s to produce %s.' %(python_script, filename)
 		try:
-			env.Command(filename, python_script, 'python $SOURCE > $TARGET')
+			env.Command(filename, python_script, 'python $SOURCE $TARGET')
 			print colored('%s reproduced.' % filename, 'green')
 		except:
 			env.Command(filename, local_file, Copy("$TARGET", "$SOURCE"))
@@ -53,14 +83,23 @@ def python_fig(python_script, filename, local_file):
 	    print colored('%s exists' % filename, 'yellow')
 	return
 
-#Run python code to create the three maps
-#In many cases, one python script could easily produce all plots, but to keep the 
-#dependencies right, three different scripts are used. 
-#E.g. If a plot exist, there is no need to recreate it
+
+# Download data
+download_url('http://seismolab.org/model/antarctica/lithosphere/AN1-HF.tar.gz', 
+	'data/AN1-HF.tar.gz', 'fig/old/AN1-HF.tar.gz')
+	
+download_url('http://seismolab.org/model/antarctica/lithosphere/AN1-LAB.tar.gz', 
+	'data/AN1-LAB.tar.gz', 'data/old/AN1-LAB.tar.gz')
+	
+download_url('http://seismolab.org/model/antarctica/lithosphere/AN1-CRUST.tar.gz', 
+	'data/AN1-CRUST.tar.gz', 'data/old/AN1-CRUST.tar.gz')
+
+
+# Produce maps
 for figure in ['HEAT','LAB','CRUST']:
 	python_fig('code/An_%s.py' %figure,'fig/An_%s.png' %figure, 'fig/old/An_%s.png' %figure)
 
-# Download figures used
+# Download figures
 download_url('https://dl.dropboxusercontent.com/u/3474970/poster/ICE.pdf', 
 	'fig/ice_cartoon.pdf', 'fig/old/ice_cartoon.pdf')
 	

@@ -72,7 +72,7 @@ def ncdump(nc_fid, verb=True):
     return nc_attrs, nc_dims, nc_vars
 
 
-heat_flux = 'data/old/AN1-HF.grd'
+heat_flux = 'data/AN1-HF.grd'
 
 # an_model is initial array, ny and nx resolution
 

@@ -79,7 +79,7 @@ def ncdump(nc_fid, verb=True):
     return nc_attrs, nc_dims, nc_vars
 
 
-crust_depth = 'data/old/AN1-CRUST.grd'
+crust_depth = 'data/AN1-CRUST.grd'
 
 # an_model is initial array, ny and nx resolution
 
